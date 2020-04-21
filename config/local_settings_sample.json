@@ -1,0 +1,8 @@
+{
+  "db_driver": "mysql+pymysql",
+  "db_port": "3306",
+  "db_host": "localhost",
+  "db_user": "user",
+  "db_pass": "password",
+  "example_db": "example_db"
+}

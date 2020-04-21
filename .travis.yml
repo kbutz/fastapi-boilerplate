@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+  
+before_script:
+  - docker build -t flask-boilerplate -f ./deployment/Dockerfile.test .
+  
+script:
+  - docker run -e ENVIRONMENT='testing' flask-boilerplate
