@@ -16,7 +16,7 @@ class Item(BaseModel):
     tax: float = None
 
 
-# TODO: Import cycle here
+# TODO: Fix import cycle here
 # Dependency
 def get_db():
     try:
@@ -27,7 +27,7 @@ def get_db():
 
 
 # Example route
-@router.post('/example-route')
+@router.get('/example-route/post')
 def example_route_post(db: Session = Depends(get_db)):
     # Example DB transaction w/ sql-alchemy
     request_transaction = ApiLog(endpoint="TODO",

@@ -10,9 +10,6 @@ from app.db import models
 
 def create_app(session: Session, engine: Engine, environment="default"):
     # config[environment].db = session
-    # TODO: Use migrations here
-    models.Base.metadata.create_all(bind=engine)
-
     app = FastAPI()
 
     # TODO: Figure out if there is a better way to do this with DI
