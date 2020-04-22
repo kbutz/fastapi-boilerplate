@@ -5,8 +5,6 @@ from pydantic import BaseModel
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import Session
 
-from app.db import db
-
 Base = declarative_base()
 
 

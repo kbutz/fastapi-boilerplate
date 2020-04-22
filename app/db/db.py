@@ -2,6 +2,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+from alembic.config import Config as AlembicConfig
+from alembic import command
+
 from app.db import models
 from config.config import Config, config
 
@@ -16,8 +19,10 @@ def init_db(environment="default"):
         SQLALCHEMY_DATABASE_URL
     )
 
-    # TODO: Use migrations here
-    models.Base.metadata.create_all(bind=engine)
+    # models.Base.metadata.create_all(bind=engine)
+
+    alembic_cfg = AlembicConfig("./app/alembic.ini")
+    command.upgrade(alembic_cfg, "head")
 
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

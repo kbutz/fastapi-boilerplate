@@ -1,0 +1,14 @@
+Generic single-database configuration.
+
+To generate revisions, you'll need to have pip installed alembic, or run pip install -r requirements.txt and initialized
+your virtualenv. #TODO: add instructions for these set-up steps in the root directory's README.
+
+To generate revisions based on your sqlalchemy models:
+- `alembic revision --autogenerate -m "remove that important field"`
+
+To update your schema from the command line:
+- `alembic upgrade head`
+
+You won't really need that since automigrate is baked into app startup. I've seen issues where a bad version from
+autogenerate will cause some headaches. For example, you autogenerate after adding a Column of type String() without
+a field length. The migration will run, but fail. Your alembic version will be applied, but your DB schema won't be up to date.

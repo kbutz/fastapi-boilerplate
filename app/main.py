@@ -5,8 +5,6 @@ from fastapi import FastAPI
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session
 
-from app.db import models
-
 
 def create_app(session: Session, engine: Engine, environment="default"):
     # config[environment].db = session
