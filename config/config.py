@@ -2,9 +2,7 @@ import json
 import os
 from typing import Optional
 
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, Session
+from sqlalchemy.orm import Session
 
 
 class Config:
@@ -23,7 +21,6 @@ class Config:
 # Example Development config loading configuration variables from file
 class DevelopmentConfig(Config):
     def __init__(self):
-        print("!!!!!!!!!!!!")
         Config.__init__(self)
         self.DEBUG = True
         self.SQLALCHEMY_ECHO = True
@@ -31,7 +28,6 @@ class DevelopmentConfig(Config):
         config_path = "./config/local_settings.json"
 
         with open(config_path, 'r') as config_json:
-            print("????????????")
             config_settings = json.load(config_json)
 
             self.MYSQL_DRIVER = config_settings["db_driver"]
