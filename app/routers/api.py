@@ -39,5 +39,12 @@ def example_route_post(db: Session = Depends(get_db)):
 
 
 @router.get('/example-route')
-def example_route_get():
+def example_route_get(db: Session = Depends(get_db)):
+    # Example DB transaction w/ sql-alchemy
+    request_transaction = ApiLog(
+        endpoint="TODO",
+        payload="str(item)"
+    )
+
+    request_transaction.create_api_log(db, request_transaction)
     return {"hello": "world"}
