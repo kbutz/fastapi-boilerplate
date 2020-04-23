@@ -11,7 +11,7 @@ TODO:
 - [x] Basic route structure for a FastAPI app w/ multiple routers
 - [x] sql-alchemy integration
 - [x] Add migrations
-- [ ] Migrations need to have their config set from the global config
+- [x] Migrations need to have their config set from the global config
 - [ ] Follow up for migrations: review developer workflow for migrations, refactor to make it more ergonomic if needed. 
       The migrations step should be as simple as Go's gorm.Automigrate - define a model, 
       let the service update the DB schema on startup
