@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 
-# from app.db import db
-# from config.config import config
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session
 
