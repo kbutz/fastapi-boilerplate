@@ -3,7 +3,7 @@
 A project for me to try out fastapi+mysql by building a production ready boilerplate.
 
 To run locally, 
-- spin up a virtualenv `virtualenv -p python3.7 vent` and `.venv/bin/activate` or `source venv/bin/activate`
+- spin up a virtualenv `virtualenv -p python3.7 venv` and `.venv/bin/activate` or `source venv/bin/activate`
 - `pip install -r requirements.txt`
 - `uvicorn main:app --reload`
 
