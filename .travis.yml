@@ -4,7 +4,8 @@ services:
   - docker
   
 before_script:
-  - docker build -t flask-boilerplate -f ./deployment/Dockerfile.test .
+  - docker build -t fastapi-boilerplate -f ./deployment/Dockerfile.test .
   
 script:
-  - docker run -e ENVIRONMENT='testing' flask-boilerplate
+  - docker run -e ENVIRONMENT='testing' fastapi-boilerplate
+g
