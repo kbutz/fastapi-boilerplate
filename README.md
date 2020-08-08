@@ -15,7 +15,7 @@ TODO:
 - [ ] Follow up for migrations: review developer workflow for migrations, refactor to make it more ergonomic if needed. 
       The migrations step should be as simple as Go's gorm.Automigrate - define a model, 
       let the service update the DB schema on startup
-- [ ] Dockerfile for deployment
+- [x] Dockerfile for deployment
 - [ ] Test coverage, figure out how to write integration tests for FastAPI routes
 - [ ] Travis or CircleCI integration
 - [ ] Metrics and observation
