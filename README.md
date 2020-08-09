@@ -19,7 +19,7 @@ TODO:
       let the service update the DB schema on startup
 - [x] Dockerfile for deployment
 - [ ] Test coverage, figure out how to write integration tests for FastAPI routes
-- [ ] Travis or CircleCI integration
+- [x] ~~Travis or CircleCI integration~~ Github Actions CI/CD pipeline
 - [ ] Metrics and observation
 - [ ] Documentation on the fastapi boilerplate workflow
 
