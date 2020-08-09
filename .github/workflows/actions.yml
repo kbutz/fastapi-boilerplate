@@ -1,3 +1,4 @@
+# For more tips on github workflows w/ dockerfiles: https://www.basefactor.com/github-actions-docker
 name: CI
 
 on:
