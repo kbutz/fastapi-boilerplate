@@ -1,5 +1,7 @@
 # fastapi-boilerplate 
 
+![Build Status](https://github.com/kbutz/fastapi-boilerplate/workflows/CI/badge.svg)
+
 A project for me to try out fastapi+mysql by building a production ready boilerplate.
 
 To run locally, 
